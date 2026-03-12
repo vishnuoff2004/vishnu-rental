@@ -1,6 +1,6 @@
 // middleware/adminAuth.js
 const jwt = require("jsonwebtoken");
-const User = require("../models/User"); // adjust path if needed
+const User = require("../models/user"); // adjust path if needed
 
 const SECRET_KEY = "vishnu-noob-is-a-secret";
 

@@ -4,7 +4,7 @@ const router = express.Router();
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-const {User} = require("../models/user");
+const User = require("../models/user");
 const Booking = require("../models/Booking");
 const Vehicle = require("../models/Vehicle");
 const adminAuth = require("../middleware/adminAuth");
