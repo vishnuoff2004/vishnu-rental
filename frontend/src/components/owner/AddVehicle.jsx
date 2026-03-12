@@ -5,7 +5,8 @@ import "./addvehicle.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import OwnerFooter from "./OwnerFooter";
-import API from "../../../api";
+import API from "../api";
+
 
 export default function AddVehicle() {
   const [details, setDetails] = useState({

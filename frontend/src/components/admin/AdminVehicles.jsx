@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./adminvehicles.css";
+import API from "../api";
+
 
 export default function AdminVehicles() {
   const [vehicles, setVehicles] = useState([]);
@@ -16,7 +18,7 @@ export default function AdminVehicles() {
 
   const fetchVehicles = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/admin/vehicles", {
+      const res = await axios.get(`${API}/admin/vehicles`, {
         headers: { Authorization: "Bearer " + localStorage.getItem("adminToken") },
       });
       setVehicles(res.data.vehicles || []);
@@ -30,7 +32,7 @@ export default function AdminVehicles() {
     if (!window.confirm("Approve this vehicle?")) return;
     try {
       await axios.post(
-        `http://localhost:5000/admin/vehicle/approve/${id}`,
+        `${API}/admin/vehicle/approve/${id}`,
         {},
         {
           headers: { Authorization: "Bearer " + localStorage.getItem("adminToken") },
@@ -52,7 +54,7 @@ export default function AdminVehicles() {
   const deleteVehicle = async (id) => {
     if (!window.confirm("Delete this vehicle and related bookings?")) return;
     try {
-      await axios.delete(`http://localhost:5000/admin/vehicle/${id}`, {
+      await axios.delete(`${API}/admin/vehicle/${id}`, {
         headers: { Authorization: "Bearer " + localStorage.getItem("adminToken") },
       });
 

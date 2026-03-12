@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./admindashboard.css";
-
+import API from "../api";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,
@@ -28,7 +28,7 @@ export default function AdminDashboard() {
 
   const fetchStats = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/admin/stats", {
+      const res = await axios.get(`${API}/admin/stats`, {
         headers: { Authorization: "Bearer " + localStorage.getItem("adminToken") },
       });
       setStats(res.data);

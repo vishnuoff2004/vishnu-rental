@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./adminbookings.css";
+import API from "../api";
 
 export default function AdminBookings() {
   const [bookings, setBookings] = useState([]);
@@ -16,7 +17,7 @@ export default function AdminBookings() {
 
   const fetchBookings = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/admin/bookings", {
+      const res = await axios.get(`${API}/admin/bookings`, {
         headers: { Authorization: "Bearer " + localStorage.getItem("adminToken") }
       });
       setBookings(res.data.bookings);
@@ -34,7 +35,7 @@ export default function AdminBookings() {
     if (!window.confirm("Delete this booking?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/admin/booking/${id}`, {
+      await axios.delete(`${API}/admin/booking/${id}`, {
         headers: { Authorization: "Bearer " + localStorage.getItem("adminToken") }
       });
       setBookings(bookings.filter((b) => b._id !== id));

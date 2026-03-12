@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./adminusers.css";
+import API from "../api";
+
 
 export default function AdminUsers() {
   const [users, setUsers] = useState([]);
@@ -16,7 +18,7 @@ export default function AdminUsers() {
 
   const fetchUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/admin/users", {
+      const res = await axios.get(`${API}/admin/users`, {
         headers: { Authorization: "Bearer " + localStorage.getItem("adminToken") },
       });
       setUsers(res.data.users);
@@ -35,7 +37,7 @@ export default function AdminUsers() {
       return;
 
     try {
-      await axios.delete(`http://localhost:5000/admin/user/${id}`, {
+      await axios.delete(`${API}/admin/user/${id}`, {
         headers: { Authorization: "Bearer " + localStorage.getItem("adminToken") },
       });
       setUsers(users.filter((u) => u._id !== id));

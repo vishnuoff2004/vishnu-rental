@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./owner.css";
 import { toast } from "react-toastify";
 import OwnerFooter from "./OwnerFooter";
-import API from "../../../api";
+import API from "../api";
 
 
 export default function MyVehicles() {

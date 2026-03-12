@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./adminlogin.css";  // Only light custom styling
+import API from "../api";
+
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");
@@ -12,7 +14,7 @@ export default function AdminLogin() {
     e.preventDefault();
 
     try {
-      const res = await axios.post("http://localhost:5000/admin/login", {
+      const res = await axios.post(`${API}/admin/login`, {
         email,
         password,
       });
