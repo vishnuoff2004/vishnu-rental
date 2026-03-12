@@ -3,9 +3,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import axios from "axios";
 import "./vehicleDetails.css";
 import UserFooter from "./UserFooter";
-import API from "../api";
-
-
+import API from "../../api";
 
 // IMPORT DATE PICKER
 import DatePicker from "react-datepicker";

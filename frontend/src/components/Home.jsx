@@ -3,7 +3,8 @@ import {Link} from "react-router-dom"
 import { useEffect, useState } from "react";
 import axios from "axios";
 import API from "../api";
-
+import bkImg from "../assets/bk-l.jpg";
+import crImg from "../assets/cr.jpg";
 
 export default function Home(){
     const [vehicles, setVehicles] = useState([]);

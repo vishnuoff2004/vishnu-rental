@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import OwnerFooter from "./OwnerFooter";
 import { toast } from "react-toastify";
 import "./owner.css"
-import API from "../api";
+import API from "../../api";
 
 
 export default function OwnerBookings() {

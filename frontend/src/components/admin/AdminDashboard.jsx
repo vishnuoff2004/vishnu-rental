@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./admindashboard.css";
-import API from "../api";
+import API from "../../api";
 import { Bar } from "react-chartjs-2";
 import {
   Chart as ChartJS,

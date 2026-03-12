@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./adminvehicles.css";
-import API from "../api";
+import API from "../../api";
 
 
 export default function AdminVehicles() {

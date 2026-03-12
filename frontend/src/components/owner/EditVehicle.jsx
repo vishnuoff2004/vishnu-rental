@@ -5,7 +5,7 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./owner.css";
 import OwnerFooter from "./OwnerFooter";
-import API from "../api";
+import API from "../../api";
 
 
 export default function EditVehicle() {

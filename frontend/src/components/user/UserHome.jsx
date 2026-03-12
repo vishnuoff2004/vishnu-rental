@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import UserFooter from "./UserFooter";
 import "./userhome.css";
-import API from "../api";
-
-
+import API from "../../api";
 
 export default function UserHome() {
   const [vehicles, setVehicles] = useState([]);

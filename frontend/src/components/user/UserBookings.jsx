@@ -3,9 +3,7 @@ import axios from "axios";
 import UserFooter from "./UserFooter";
 import { useNavigate, Link } from "react-router-dom";
 import "./bookings.css"
-import API from "../api";
-
-
+import API from "../../api";
 
 export default function UserBookings() {
   const [bookings, setBookings] = useState([]);

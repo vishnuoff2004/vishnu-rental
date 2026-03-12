@@ -2,8 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./adminlogin.css";  // Only light custom styling
-import API from "../api";
-
+import API from "../../api";
 
 export default function AdminLogin() {
   const [email, setEmail] = useState("");

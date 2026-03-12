@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./SignUp.css"
 import axios from "axios";
-import API from "../api";
+import API from "../../api";
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";

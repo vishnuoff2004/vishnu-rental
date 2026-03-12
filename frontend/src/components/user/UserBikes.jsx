@@ -3,9 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./uservehicles.css";
 import UserFooter from "./UserFooter";
-import API from "../api";
-
-
+import API from "../../api";
 
 export default function UserBikes() {
   const [bikes, setBikes] = useState([]);
